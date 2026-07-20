@@ -4,7 +4,6 @@ services:
     name: banking-backend
     runtime: docker
     plan: standard
-    healthCheckPath: /swagger-ui/index.html
     dockerfilePath: ./Dockerfile
     envVars:
       - key: PORT
