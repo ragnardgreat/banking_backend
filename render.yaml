@@ -19,8 +19,8 @@ services:
         fromDatabase:
           name: banking-db
           property: password
-      - key: SPRING_JPA_HIBERNATE_DDL_AUTO
-        value: update
+      - key: PORT
+        value: "8080"
 
   # PostgreSQL database
   - type: pserv
