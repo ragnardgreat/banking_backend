@@ -10,4 +10,5 @@ import lombok.NoArgsConstructor;
 public class AddFundsDto {
     private long id;
     private double amount;
+    private String token;
 }

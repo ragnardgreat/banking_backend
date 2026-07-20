@@ -27,7 +27,7 @@ public class BankingController {
     @RateLimiter(name = "apiLimiter")
     @PostMapping("addfunds")
     public void addFunds(@RequestBody AddFundsDto addFundsDto) {
-        bankingService.addFunds(addFundsDto.getId(), addFundsDto.getAmount());
+        bankingService.addFunds(addFundsDto.getId(), addFundsDto.getAmount(), addFundsDto.getToken());
     }
 
     @RateLimiter(name = "apiLimiter")

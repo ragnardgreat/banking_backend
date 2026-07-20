@@ -59,10 +59,10 @@ public class BankingService {
     }
 
 
-    public void addFunds(@RequestBody Long id, double amount) {
+    public void addFunds(@RequestBody Long id, double amount, String token) {
         Person person = userRepository.findById(id).orElseThrow();
         userService.personValidator(person);
-        userService.tokenValidator(id, person.getToken());
+        userService.tokenValidator(id, token);
         //Create transaction
         Transaction transaction = new Transaction();
         transaction.setReceiverId(id);
